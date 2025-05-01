@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - ToolKit</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <!-- Navbar (same as index.html) -->
+    <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-tools text-2xl text-blue-600 dark:text-blue-400 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-800 dark:text-white">ToolKit</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                    <a href="tools.html" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Tools</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-300"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-gray-600 dark:text-gray-200">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="tools.html" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Tools</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tools Container -->
+    <div class="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Tools Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Calculator -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Calculator</h2>
+                    <div class="calculator-container">
+                        <input type="text" id="calc-display" class="w-full p-4 text-right text-2xl bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg mb-4" readonly>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">7</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">8</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">9</button>
+                            <button class="calc-btn bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">/</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">4</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">5</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">6</button>
+                            <button class="calc-btn bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">*</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">1</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">2</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">3</button>
+                            <button class="calc-btn bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">-</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">0</button>
+                            <button class="calc-btn bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white p-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500">.</button>
+                            <button class="calc-btn bg-red-500 text-white p-4 rounded-lg hover:bg-red-600">C</button>
+                            <button class="calc-btn bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600">+</button>
+                            <button class="calc-btn col-span-4 bg-green-500 text-white p-4 rounded-lg hover:bg-green-600">=</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timer -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Timer</h2>
+                    <div class="timer-container text-center">
+                        <div class="text-6xl font-bold text-gray-900 dark:text-white mb-6" id="timer-display">00:00:00</div>
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <input type="number" id="hours" placeholder="HH" class="p-2 text-center bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg">
+                            <input type="number" id="minutes" placeholder="MM" class="p-2 text-center bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg">
+                            <input type="number" id="seconds" placeholder="SS" class="p-2 text-center bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg">
+                        </div>
+                        <div class="flex space-x-4">
+                            <button id="timer-start" class="flex-1 bg-green-500 text-white p-3 rounded-lg hover:bg-green-600">Start</button>
+                            <button id="timer-pause" class="flex-1 bg-yellow-500 text-white p-3 rounded-lg hover:bg-yellow-600">Pause</button>
+                            <button id="timer-reset" class="flex-1 bg-red-500 text-white p-3 rounded-lg hover:bg-red-600">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Currency Converter -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Currency Converter</h2>
+                    <div class="currency-container">
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-gray-700 dark:text-gray-300 mb-2">From</label>
+                                <select id="from-currency" class="w-full p-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg">
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="JPY">JPY</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 dark:text-gray-300 mb-2">To</label>
+                                <select id="to-currency" class="w-full p-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg">
+                                    <option value="EUR">EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="JPY">JPY</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input type="number" id="amount" placeholder="Amount" class="w-full p-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg">
+                        </div>
+                        <button id="convert-btn" class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600">Convert</button>
+                        <div id="result" class="mt-4 text-center text-xl font-bold text-gray-900 dark:text-white"></div>
+                    </div>
+                </div>
+
+                <!-- Notepad -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Notepad</h2>
+                    <div class="notepad-container">
+                        <div class="mb-4">
+                            <input type="text" id="note-title" placeholder="Note Title" class="w-full p-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg mb-2">
+                            <textarea id="note-content" rows="8" placeholder="Start typing..." class="w-full p-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg"></textarea>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button id="save-note" class="flex-1 bg-green-500 text-white p-3 rounded-lg hover:bg-green-600">Save</button>
+                            <button id="clear-note" class="flex-1 bg-red-500 text-white p-3 rounded-lg hover:bg-red-600">Clear</button>
+                        </div>
+                        <div id="saved-notes" class="mt-4">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Saved Notes</h3>
+                            <div id="notes-list" class="space-y-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-white dark:bg-gray-800 shadow-lg mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Subscribe to our Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="px-6 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors duration-200">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2024 ToolKit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/converter.js"></script>
+    <script src="js/notepad.js"></script>
+</body>
+</html> 
