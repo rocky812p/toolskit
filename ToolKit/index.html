@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolKit - All-in-One Web Tools</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="fas fa-tools text-2xl text-blue-600 dark:text-blue-400 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-800 dark:text-white">ToolKit</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                    <a href="tools.html" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Tools</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-300"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-gray-600 dark:text-gray-200">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="tools.html" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Tools</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 opacity-0 transform translate-y-8 animate-fade-in-up">
+                    Your All-in-One Web Toolkit
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 opacity-0 transform translate-y-8 animate-fade-in-up animation-delay-200">
+                    Access powerful web tools instantly. No installation needed.
+                </p>
+            </div>
+
+            <!-- Tool Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <!-- Calculator Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-200 opacity-0 animate-fade-in">
+                    <div class="text-center">
+                        <i class="fas fa-calculator text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Calculator</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Advanced calculator with history</p>
+                    </div>
+                </div>
+
+                <!-- Timer Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-200 opacity-0 animate-fade-in animation-delay-200">
+                    <div class="text-center">
+                        <i class="fas fa-clock text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Timer</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Countdown timer & stopwatch</p>
+                    </div>
+                </div>
+
+                <!-- Converter Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-200 opacity-0 animate-fade-in animation-delay-400">
+                    <div class="text-center">
+                        <i class="fas fa-exchange-alt text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Converter</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Units & currency converter</p>
+                    </div>
+                </div>
+
+                <!-- Notepad Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-200 opacity-0 animate-fade-in animation-delay-600">
+                    <div class="text-center">
+                        <i class="fas fa-sticky-note text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Notepad</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Quick notes with auto-save</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Fast -->
+                <div class="text-center">
+                    <i class="fas fa-bolt text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600 dark:text-gray-300">No loading times, instant access</p>
+                </div>
+                <!-- Mobile Friendly -->
+                <div class="text-center">
+                    <i class="fas fa-mobile-alt text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Mobile Friendly</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Works perfectly on all devices</p>
+                </div>
+                <!-- Dark Mode -->
+                <div class="text-center">
+                    <i class="fas fa-moon text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Dark Mode</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Easy on your eyes at night</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 shadow-lg mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Newsletter -->
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Subscribe to our Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="px-6 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors duration-200">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+                <!-- Social Links -->
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2024 ToolKit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
